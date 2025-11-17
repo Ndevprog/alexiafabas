@@ -89,7 +89,7 @@ body{line-height:1.65;letter-spacing:.1px}
 }
 
 /* ===== BREATHWORK ===== */
-.breathwork-bg{background:url('/assets/img/arbre4.jpg') center/cover no-repeat;padding:96px 0;}
+.breathwork-bg{background:url('../img/arbre4.jpg') center/cover no-repeat;padding:96px 0;}
 .bw-titleband{opacity:0;transform:translateY(24px);background:rgba(255,255,255,.98);border:1px solid rgba(0,0,0,.10);box-shadow:0 8px 24px rgba(0,0,0,.08);border-radius:18px;padding:1.6rem 1.8rem;width:min(900px,92%);margin:0 auto 2.2rem;text-align:center;}
 .bw-titleband.visible{opacity:1;transform:none;}
 .bw-titleband h2{margin:0 0 .35rem;font-weight:800;letter-spacing:.2px;font-size:clamp(1.8rem,2vw + 1rem,2.4rem);}
