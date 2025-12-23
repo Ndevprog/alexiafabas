@@ -90,13 +90,13 @@ body{line-height:1.65;letter-spacing:.1px}
 
 /* ===== BREATHWORK ===== */
 .breathwork-bg{background:url('/assets/img/arbre4.jpg') center/cover no-repeat;padding:96px 0;}
-.bw-titleband{opacity:0;transform:translateY(24px);background:rgba(255,255,255,.98);border:1px solid rgba(0,0,0,.10);box-shadow:0 8px 24px rgba(0,0,0,.08);border-radius:18px;padding:1.6rem 1.8rem;width:min(900px,92%);margin:0 auto 2.2rem;text-align:center;}
+.bw-titleband{opacity:0;transform:translateY(24px);background:rgba(249, 241, 228, 1);border:1px solid rgba(0,0,0,.10);box-shadow:0 8px 24px rgba(0,0,0,.08);border-radius:18px;padding:1.6rem 1.8rem;width:min(900px,92%);margin:0 auto 2.2rem;text-align:center;}
 .bw-titleband.visible{opacity:1;transform:none;}
 .bw-titleband h2{margin:0 0 .35rem;font-weight:800;letter-spacing:.2px;font-size:clamp(1.8rem,2vw + 1rem,2.4rem);}
 .bw-titleband .lede{margin:0;color:#333;font-weight:500;}
 
 .bw-cards{display:grid;gap:1.8rem;width:min(900px,92%);margin-inline:auto;}
-.bw-card{opacity:0;transform:translateY(36px);background:rgba(255,255,255,.97);border:1px solid rgba(0,0,0,.06);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:1.6rem;transition:opacity .5s ease, transform .3s ease, box-shadow .2s ease;}
+.bw-card{opacity:0;transform:translateY(36px);background:rgba(249, 241, 228, 1);border:1px solid rgba(0,0,0,.06);border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:1.6rem;transition:opacity .5s ease, transform .3s ease, box-shadow .2s ease;}
 .bw-card.visible{opacity:1;transform:none;}
 .bw-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.12);}
 .bw-card h3{margin:0 0 .6rem;font-weight:750;letter-spacing:.2px;font-size:1.22rem;color:var(--brand);}
@@ -174,7 +174,7 @@ header + #accueil.hero{margin-top:0}
   --apropos-accent: var(--color-primary, var(--brand, #6a8b84));
 }
 
-#apropos h1{
+#apropos h2{
   /* harmonise le H1 de section avec tes H2 de sections existantes */
   font-family: var(--font-display, inherit);
   font-weight: 800;
@@ -325,8 +325,7 @@ header + #accueil.hero{margin-top:0}
 }
 
 /* À propos & Contact : même ambiance zen */
-#apropos,
-#contact{
+#apropos{
   background: linear-gradient(to bottom,
     var(--grad-top) 0%,
     var(--grad-mid) 60%,
@@ -334,49 +333,42 @@ header + #accueil.hero{margin-top:0}
   );
 }
 
-/* Footer avec léger renversement pour “clôturer” visuellement */
-footer{
+
+#contact{
   background: linear-gradient(to bottom,
     var(--grad-bot) 0%,
     var(--grad-mid) 60%,
     var(--grad-top) 100%
   );
-  /* Couleurs adaptées au fond vert pâle */
-  color: #2b3d38;
-}
-footer h3{ color: #2b3d38; }
-footer p{ color: #2e3c39; }
-footer a{ color: #25413d; }
-footer a:hover{ text-decoration: underline; }
-.footer-grid .signature{ color:#37504b; }
-
-/* ====== Footer en 3 colonnes (compact) ====== */
-.footer-grid{
-  display:grid;
-  gap:24px;
-  text-align:left;
-}
-@media (min-width: 880px){
-  /* surcharge la règle précédente à 2 colonnes */
-  .footer-grid{ grid-template-columns: repeat(3, 1fr); align-items:start; }
-}
-.footer-grid section h3{ margin-bottom:.4rem; }
-.footer-grid p{ margin:.3rem 0; font-size:.9rem; }
-.footer-grid .signature{
-  grid-column:1 / -1;
-  margin-top:.6rem;
-  text-align:center;
-  font-weight:500;
 }
 
-/* (Optionnel) Liseré de séparation très léger pour la lisibilité */
-.footer-grid section{
-  border: 1px solid rgba(0,0,0,.06);
-  border-radius: 14px;
-  padding: 14px 16px;
-  background: rgba(255,255,255,.55);
-  backdrop-filter: blur(2px);
+.footer-slim{
+  border-top: 1px solid rgba(0,0,0,.08);
+  padding: 14px 0;
+  background: rgba(255,255,255,.35);
 }
+.footer-row{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  align-items:center;
+}
+@media(min-width:860px){
+  .footer-row{
+    flex-direction:row;
+    justify-content:space-between;
+  }
+}
+.footer-inline p{ margin:0; color:#37504b; font-size:.95rem; }
+.footer-inline a{
+  color:#25413d;
+  text-decoration:none;
+  font-weight:600;
+}
+.footer-inline a:hover{ text-decoration:underline; }
+
+
+
 
 /* Harmonisation : cartes contact sur fond dégradé */
 #contact .contact-card{
@@ -446,6 +438,7 @@ header .logo {
   background: var(--brand);
   border-radius: 999px;
   opacity: 0.9;
+  margin-bottom: 3rem;
 }
 #contact .section-header {
   margin-top: 24px;   /* tu peux ajuster : 24px, 60px, etc. */
@@ -455,6 +448,80 @@ header .logo {
   scroll-margin-top: 80px;
 }
 
+/* ================================
+   Harmonisation titres (H1/H2/H3)
+   + Hero meta & conversion douce
+   ================================ */
 
+.section-header{
+  text-align:center;
+}
+
+.section-title{
+  font-family:"Lora",serif;
+  font-weight:700;
+  letter-spacing:.2px;
+  color:var(--brand);
+  font-size:clamp(1.8rem, 1.6vw + 1rem, 2.4rem);
+  margin:0 0 .6rem;
+}
+
+.section-underline{
+  width:84px;
+  height:3px;
+  margin:0.2rem auto 0;
+  background:var(--brand);
+  border-radius:999px;
+  opacity:.9;
+}
+
+/* Breathwork titleband : même signature visuelle */
+.bw-titleband .section-underline{
+  margin:.6rem auto .9rem;
+}
+
+/* Hero crédibilité + micro-copy */
+.hero-meta{
+  font-size:.95rem;
+  opacity:.85;
+  letter-spacing:.4px;
+  margin:.6rem 0 1.1rem;
+  color:#f3f3f3;
+}
+
+.hero-trust{
+  margin:1rem 0 0;
+  font-size:.95rem;
+  opacity:.9;
+  letter-spacing:.2px;
+  color:#f3f3f3;
+}
+
+/* CTA hero : un peu plus “cabinet” sans agressivité */
+.hero-cta-group{
+  gap:1.1rem;
+}
+.btn-hero{
+  min-width:min(360px, 92%);
+}
+
+
+.emdr-card .deroule-media { max-height: 360px; }
+
+/* =========================
+   EMDR – Cartes fond beige
+   ========================= */
+
+/* Cartes texte EMDR */
+#emdr .text-card {
+  background: rgba(249, 241, 228, 1); /* beige doux */
+  border-color: rgba(0,0,0,.06);
+}
+
+/* Carte "Comment se déroule une séance" EMDR */
+#emdr .bw-card {
+  background: rgba(249, 241, 228, 1);
+  border-color: rgba(0,0,0,.06);
+}
 
 
