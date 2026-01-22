@@ -559,4 +559,31 @@ header .logo {
 }
 
 
+/* ===== FIX HERO MOBILE: pas de bouton coupé + image moins rognée ===== */
+.hero{
+  /* au lieu de height fixe + overflow hidden qui coupe */
+  min-height: 100svh;            /* svh = viewport "stable" sur mobile */
+  height: auto;
+  padding: 96px 0 28px;          /* respiration haut/bas (ajuste si besoin) */
+  overflow: visible;             /* autorise le contenu à vivre */
+  background-attachment: scroll; /* évite les bugs de "fixed" sur mobile */
+}
+
+/* Option: si tu veux garder le hero bien centré en desktop, on limite au mobile */
+@media (max-width:700px){
+  .hero{
+    min-height: 100svh;
+    padding: 92px 0 28px;
+    align-items: flex-start;       /* le contenu démarre plus haut */
+    background-position: top center; /* montre le haut de l'image */
+  }
+
+  .hero-content{
+    padding: 0 1.2rem;
+  }
+
+  .btn-hero{
+    min-width: min(360px, 92%);
+  }
+}
 
