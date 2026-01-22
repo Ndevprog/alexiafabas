@@ -524,4 +524,39 @@ header .logo {
   border-color: rgba(0,0,0,.06);
 }
 
+/* ===== Breathwork – Événement ===== */
+.bw-event-card{
+  background: rgba(249, 241, 228, 1);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.10);
+  padding: 1.6rem 1.8rem;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bw-event-card h3{
+  margin: 0 0 .8rem;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.bw-event-infos{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem;
+  line-height: 1.6;
+}
+
+.bw-event-infos li{
+  margin: .25rem 0;
+}
+
+.bw-event-card .btn{
+  display: inline-block;
+  margin-top: .6rem;
+}
+
+
 
