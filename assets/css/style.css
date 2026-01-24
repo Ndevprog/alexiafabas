@@ -558,32 +558,196 @@ header .logo {
   margin-top: .6rem;
 }
 
-
-/* ===== FIX HERO MOBILE: pas de bouton coupé + image moins rognée ===== */
-.hero{
-  /* au lieu de height fixe + overflow hidden qui coupe */
-  min-height: 100svh;            /* svh = viewport "stable" sur mobile */
-  height: auto;
-  padding: 96px 0 28px;          /* respiration haut/bas (ajuste si besoin) */
-  overflow: visible;             /* autorise le contenu à vivre */
-  background-attachment: scroll; /* évite les bugs de "fixed" sur mobile */
+/* ===== Page confirmation (sign.html) ===== */
+.sign-page{
+  background: linear-gradient(to bottom, var(--grad-top, #faf8f6) 0%, var(--grad-mid, #f0f6f4) 60%, var(--grad-bot, #e5f0ec) 100%);
 }
 
-/* Option: si tu veux garder le hero bien centré en desktop, on limite au mobile */
-@media (max-width:700px){
-  .hero{
-    min-height: 100svh;
-    padding: 92px 0 28px;
-    align-items: flex-start;       /* le contenu démarre plus haut */
-    background-position: top center; /* montre le haut de l'image */
-  }
+.sign-wrap{
+  padding: 72px 0;
+}
 
-  .hero-content{
-    padding: 0 1.2rem;
-  }
+.sign-card{
+  width: min(900px, 92%);
+  margin: 24px auto 0;
+  background: rgba(255,255,255,.96);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  padding: clamp(18px, 2.8vw, 28px);
+}
 
-  .btn-hero{
-    min-width: min(360px, 92%);
+.sign-lede{
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #333;
+}
+
+.sign-h2{
+  margin: 1.2rem 0 .5rem;
+  font-size: 1.15rem;
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.sign-list{
+  margin: .6rem 0 0;
+  padding-left: 1.1rem;
+  line-height: 1.65;
+}
+
+.sign-note{
+  margin-top: 1rem;
+}
+
+.sign-contact a{
+  font-weight: 700;
+  color: var(--brand);
+  text-decoration: none;
+}
+.sign-contact a:hover{ text-decoration: underline; }
+
+.sign-sep{
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.10);
+  margin: 1.4rem 0;
+}
+
+.sign-ack{
+  margin-top: 1.2rem;
+  padding-top: .9rem;
+  border-top: 1px dashed rgba(0,0,0,.12);
+}
+.sign-check{
+  display: flex;
+  gap: .6rem;
+  align-items: flex-start;
+  font-weight: 600;
+}
+.sign-check input{ margin-top: .25rem; }
+
+
+/* ===== SIGN (améliorations rendu) ===== */
+
+/* Layout 2 colonnes */
+.sign-grid{
+  display: grid;
+  gap: 18px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+@media (min-width: 980px){
+  .sign-grid{
+    grid-template-columns: 1.35fr .65fr;
+    gap: 22px;
+  }
+  .sign-side{
+    position: sticky;
+    top: 92px; /* laisse la place au header sticky */
   }
 }
 
+/* Carte principale : micro-typographie */
+.sign-card{
+  padding: clamp(18px, 2.6vw, 30px);
+}
+
+.sign-card p{
+  color: #2d2d2d;
+}
+
+.sign-h2{
+  letter-spacing: .2px;
+}
+
+/* Liste contre-indications : plus clean */
+.sign-list{
+  margin: .75rem 0 0;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: .55rem;
+}
+
+.sign-list li{
+  position: relative;
+  padding-left: 28px;
+  line-height: 1.55;
+}
+
+.sign-list li::before{
+  content: "•";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  color: var(--brand);
+  font-weight: 900;
+}
+
+/* Séparateur plus élégant */
+.sign-sep{
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+/* Case à cocher : petit “encart” */
+.sign-ack{
+  background: rgba(106,139,132,.07);
+  border: 1px solid rgba(106,139,132,.22);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+/* Colonne droite : carte séance + note */
+.sign-event{
+  max-width: none; /* prend la largeur de la colonne */
+  text-align: left;
+}
+
+.sign-event h3{
+  text-align: left;
+}
+
+.sign-side-note{
+  margin: .9rem 0 0;
+  font-size: .95rem;
+  color: rgba(43,43,43,.85);
+}
+
+/* Bouton disabled plus “pro” */
+.btn.btn-disabled{
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  opacity: .85;
+  filter: grayscale(.05);
+}
+
+/* Bouton Stripe (CTA principal) */
+.btn.btn-stripe{
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 40px;
+  padding: 1rem 1.2rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn.btn-stripe:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.16);
+}
+
+/* Email vert (uniquement où tu mets la classe) */
+.mail-green{
+  color: var(--brand);
+  font-weight: 800;
+  text-decoration: none;
+}
+.mail-green:hover{ text-decoration: underline; }
