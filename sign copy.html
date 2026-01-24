@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Confirmation d’inscription — Breathwork</title>
+  <meta name="description" content="Confirmation d’inscription : contre-indications breathwork et politique d’annulation." />
+
+  <link rel="icon" type="image/png" href="assets/img/favicon-fox.png">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img class="logo" src="assets/img/logoalexiafox.png" alt="Logo Alexia Fabas">
+      </div>
+
+      <button class="burger" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+      <nav>
+        <ul id="navlist">
+          <li><a href="/index.html#accueil">Accueil</a></li>
+          <li><a href="/index.html#emdr">EMDR</a></li>
+          <li><a href="/index.html#breathwork">Breathwork</a></li>
+          <li><a href="/index.html#apropos">À propos</a></li>
+          <li><a href="/index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="sign-page">
+    <section class="sign-wrap" aria-labelledby="sign-title">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <h1 id="sign-title" class="section-title">Confirmation d’inscription</h1>
+            <div class="section-underline"></div>
+          </div>
+        </header>
+
+        <!-- ✅ Nouveau wrapper : 2 colonnes sur desktop -->
+        <div class="sign-grid">
+          <!-- Colonne gauche : texte -->
+          <article class="sign-card" role="region" aria-label="Contre-indications et politique d’annulation">
+            <p class="sign-lede">
+              En vous inscrivant à une séance, vous confirmez avoir pris connaissance des contre-indications ci-dessous ainsi que de la politique d’annulation.
+            </p>
+
+            <h2 class="sign-h2">Contre-indications</h2>
+            <p>Les séances de breathwork ne sont pas adaptées dans les situations suivantes :</p>
+
+            <ul class="sign-list">
+              <li>Grossesse</li>
+              <li>Tension artérielle élevée ou basse (hypertension ou hypotension)</li>
+              <li>Maladie cardiovasculaire, antécédent de crise cardiaque ou d’AVC</li>
+              <li>Épilepsie</li>
+              <li>Diagnostic de schizophrénie, de bipolarité ou autre trouble psychiatrique</li>
+              <li>Consommation de substances psychoactives (drogues récréatives)</li>
+              <li>Asthme sévère ou non stabilisé</li>
+              <li>Intervention chirurgicale récente</li>
+              <li>Glaucome ou décollement de la rétine</li>
+              <li>Anévrisme (antécédent personnel ou risque génétique identifié)</li>
+              <li>Stress post-traumatique profond sans accompagnement psychothérapeutique</li>
+              <li>Diabète non stabilisé</li>
+            </ul>
+
+            <p class="sign-note">
+              La prise d’antidépresseurs ne constitue pas une contre-indication absolue, mais nécessite que vous m’en informiez afin que nous puissions en échanger avant la séance.
+            </p>
+
+            <p class="sign-contact">
+              En cas de doute ou de question, je vous invite à me contacter à
+              <a href="mailto:alexiabreathwork@gmail.com">alexiabreathwork@gmail.com</a>
+              avant votre inscription.
+            </p>
+
+            <hr class="sign-sep" />
+
+            <h2 class="sign-h2">Politique d’annulation</h2>
+            <p>
+              Si vous souhaitez modifier ou annuler une séance, envoyez-moi un e-mail à
+              <a href="mailto:alexiabreathwork@gmail.com">alexiabreathwork@gmail.com</a>.
+              Je propose soit un crédit pour une prochaine séance, soit le remboursement avec une déduction forfaitaire de 1 euros pour couvrir les frais de transaction.
+              <br><br>
+              La politique d'annulation est de 24 heures avant la session. Passé ce délai, la session ne pourra ni être remboursée ni être échangée.
+            </p>
+
+            <div class="sign-ack" aria-label="Accusé de lecture">
+              <label class="sign-check">
+                <input type="checkbox" id="ack" />
+                <span>Je confirme avoir lu et compris les contre-indications et la politique d’annulation.</span>
+              </label>
+            </div>
+          </article>
+
+          <!-- Colonne droite : carte séance -->
+          <aside class="sign-side" aria-label="Détails de la séance">
+            <div class="bw-event-card sign-event">
+              <h3>Séance de Breathwork en groupe</h3>
+
+              <ul class="bw-event-infos">
+                <li>📅 <strong>Mercredi 18 mars 2026</strong></li>
+                <li>⏰ 18h30 – 20h30</li>
+                <li>📍 Massage et sens, 39 Bd de Verdun, 33670 Créon</li>
+                <li>👥 Places limitées à 6 personnes</li>
+                <li>💶 <strong>40 €</strong> — paiement en ligne</li>
+              </ul>
+
+             <a class="btn btn-stripe" href="TON_LIEN_STRIPE_ICI" target="_blank" rel="noopener noreferrer">
+  Payer et réserver ma place
+</a>
+
+            
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer footer-slim footer-inline">
+    <div class="container footer-row">
+      <p class="footer-copy">© <span id="year"></span> Alexia Fabas</p>
+      <p class="footer-links">
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <span aria-hidden="true">·</span>
+        <a href="/politique-confidentialite.html">Politique de confidentialité</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+  <script>
+    function toggleMenu(){ document.getElementById('navlist').classList.toggle('open'); }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
